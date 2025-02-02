@@ -1,0 +1,32 @@
+{% load static %}
+
+<html>
+    <link rel="stylesheet" href="{% static 'manage_style.css' %}">
+    <header id="head_style">
+        <img src="{% static 'library-book.svg' %}" id="logo">
+        <label id="head_text">MAIN MENU</label>
+        <img src="{% static 'insitution_logo.jpg' %}" id="logo-right">
+    </header>
+
+    <body id="body_style">
+        <div id="placing">
+            <a href="manage books">
+                <button id="button_style">Manage Books</button>
+            </a>
+        </div>
+        <div id="placing_1">
+            <a href="student">
+                <button id="button_style">Student</button>
+            </a>
+        </div>
+
+        <div id="placing_2">
+            <a href="issues">
+                <button id="button_style">Manage Issuings</button>
+            </a>
+        </div>
+    </body>
+    <footer id="footer_style" style="position: relative; top:500px">
+        <label id="footer_text">LIBRARY MANAGEMENT SYSTEM</label>
+    </footer>
+</html>

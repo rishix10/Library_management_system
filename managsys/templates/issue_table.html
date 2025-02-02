@@ -1,0 +1,77 @@
+{% load static %}
+<html>
+    <link rel="stylesheet" href="{% static 'manage_style.css' %}">
+    <header id="head_style">
+        <img src="{% static 'library-book.svg' %}" id="logo">
+        <a href="home">
+            <button class="head_menu">Main Menu</button>
+        </a>
+        <a href="manage1">
+            <button class="head_menu">Manage Book</button>
+        </a>
+        <a href="stu">
+            <button class="head_menu">Manage Student</button>
+        </a>
+        <label id="head_text" style="position: relative; left: -100px;">ISSUE BOOKS</label>
+        <img src="{% static 'insitution_logo.jpg' %}" id="logo-right">
+    </header>
+
+    <body>
+        <div class="body_container">
+            <div class="body_child">
+                <form action="issert">
+                    <p id="topic_style">Add Issuing Details :</p>
+
+                    <label class="text_style"> Student ID  : 
+                    <input name="sid" id="sid" placeholder="Enter Student ID" size="50" type="text"/>
+                    </label>
+                    <label class="text_style"> Book ID: 
+                    <input name="bid" id="bid" placeholder="Enter Book ID" size="50" type="text"/>
+                    </label>
+                    <label class="text_style"> Issue Date : 
+                    <input name="isd" id="isd" placeholder="Enter Issue Date" size="50" type="date"/>
+                    </label>
+                    <label class="text_style"> Return Date : 
+                    <input name="rtd" id="rtd" placeholder="Enter Return Date" size="50" type="date"/>
+                    </label>
+                    <br><br>
+                    <input type="submit" style="padding: 5px; position: relative; left: 20px;">
+                </form>
+            </div>
+            <div class="body_child" style="position: relative; left: -10px;">
+                <p id="topic_style">BOOK ISSUINGS</p>
+                
+                <table style="position: relative; left: -2px;">
+                    <thead>
+                        <tr>
+                            <th scope="col">Student ID</th>
+                            <th scope="col">Book ID</th>
+                            <th scope="col">Issue Date</th>
+                            <th scope="col">Return Date</th>
+                            <th scope="col">Fine</th>
+                            <th scope="col">Actions</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in iss %}
+                        <tr>
+                            <td>{{i.s_id}}</td>
+                            <td>{{i.b_id}}</td>
+                            <td>{{i.i_date}}</td>
+                            <td>{{i.r_date}}</td>
+                            <td>{{i.fine}}</td>
+                            <td><a href="edit/{{i.id}}">Edit</a></td>
+                            <td><a href="delis/{{i.id}}">Delete</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+
+    <footer id="footer_style">
+        <label id="footer_text">LIBRARY MANAGEMENT SYSTEM</label>
+    </footer>
+</html>

@@ -1,0 +1,73 @@
+{% load static %}
+<html>
+    <link rel="stylesheet" href="{% static 'manage_style.css' %}">
+    <header id="head_style">
+        <img src="{% static 'library-book.svg' %}" id="logo">
+        <a href="home">
+            <button class="head_menu">Main Menu</button>
+        </a>
+        <a href="stu">
+            <button class="head_menu">Manage Student</button>
+        </a>
+        <a href="issuing">
+            <button class="head_menu">Manage Issuings</button>
+        </a>
+        <label id="head_text">ADD/MANAGE BOOKS</label>
+        <img src="{% static 'insitution_logo.jpg' %}" id="logo-right">
+    </header>
+
+    <body>
+        <div class="body_container">
+            <div class="body_child">
+                <form action="insert">
+                    <p id="topic_style">Add Book Details :</p>
+
+                    <label class="text_style"> Book Name  : 
+                    <input name="book" id="book" placeholder="Enter Book Name" size="50" type="text"/>
+                    </label>
+                    <label class="text_style"> Author Name: 
+                    <input name="author" id="author" placeholder="Enter Author Name" size="50" type="text"/>
+                    </label>
+                    <label class="text_style"> Book ID : 
+                    <input name="id" id="id" placeholder="Enter Book ID" size="50" type="text"/>
+                    </label>
+                    <label class="text_style"> Quantity : 
+                    <input name="quantity" id="quantity" placeholder="Enter Quantity" size="50" type="text"/>
+                    </label>
+                    <br><br>
+                    <input type="submit" style="padding: 5px; position: relative; left: 20px;">
+                </form>
+            </div>
+            <div class="body_child" style="position: relative; left: -10px;">
+                <p id="topic_style">Book Details</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Book ID</th>
+                            <th scope="col">Book Name</th>
+                            <th scope="col">Author Name</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in b %}
+                        <tr>
+                            <td>{{i.bookid}}</td>
+                            <td>{{i.bname}}</td>
+                            <td>{{i.author}}</td>
+                            <td>{{i.quantity}}</td>
+                            <td><a href="delib/{{i.id}}">Delete</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+
+    <footer id="footer_style">
+        <label id="footer_text">LIBRARY MANAGEMENT SYSTEM</label>
+    </footer>
+</html>

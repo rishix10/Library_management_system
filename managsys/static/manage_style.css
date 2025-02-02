@@ -1,0 +1,147 @@
+/*heading styles*/
+#head_style {
+    background-color: gold;
+    width: auto;
+    height: 50px;
+    text-align: center;
+    padding: 30px;
+    
+}
+.head_menu {
+    position: relative;
+    top: 20px; left: 200px;
+}
+#head_text {
+    text-decoration: solid;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #cc0000;
+    position: relative;
+    top: -10px ; left: -150px;
+}
+#logo {
+    width: 180px;
+    height: 90px;
+    float:left;
+    position: relative;
+    bottom: 20px;
+}
+#logo-right {
+    width: 200px;
+    height: 130px;
+    float: right;
+    mix-blend-mode:multiply;
+    position: relative;
+    bottom: 30px;
+    
+}
+.body_container {
+    height: 500px;
+    width: 100%;
+    background-color: grey;
+    display: flex;
+    gap: 30px;
+    position: relative;
+    top:-50px ;
+    
+}
+
+.body_child {
+    position: relative;
+    top: 10px ; left: 20px ;
+    width:50% ;
+    height: 450px;
+    
+    background-color: yellowgreen;
+    border: 2px solid red;
+    padding: 5px;
+}
+
+/*inside form*/
+#topic_style {
+    font-weight: bolder;
+    font-size: 25px;
+    text-decoration: underline;
+    color: darkblue
+}
+
+.text_style {
+    color: darkred;
+    font:  bold 24px/1 sans-serif;
+    display: flex;
+    padding: 10px;
+    gap: 20px ;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    position: relative;
+    left: 20px;
+}
+thead, tfoot {
+    background-color: rgb(228 240 245);
+}
+tbody {
+    background-color: rgb(228 240 245);
+}  
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+
+
+/*footer style*/
+#footer_style {
+    background-color: antiquewhite;
+    text-align: center;
+    height: 85px;
+    position: relative;
+    top: -50px;
+}
+#footer_text {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 26px;
+    text-decoration: underline;
+    color: #cc0000;
+    position: relative;
+    top: 30px;
+    font-style: italic;
+}
+
+
+#body_style {
+    background-color: lightblue ;
+    width: auto;
+    height: auto;
+}
+
+#placing {
+    position: absolute;
+    top: 250px;
+    left: 550px;
+}
+
+#button_style {
+    background-color: palevioletred;
+    padding: 20px;
+}
+
+#placing_1 {
+    position: absolute;
+    top: 250px;
+    left: 750px;
+}
+
+#placing_2 {
+    position: absolute;
+    top: 400px;
+    left: 680px;
+}

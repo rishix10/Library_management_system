@@ -1,0 +1,69 @@
+{% load static %}
+<html>
+    <link rel="stylesheet" href="{% static 'manage_style.css' %}">
+    <header id="head_style">
+        <img src="{% static 'library-book.svg' %}" id="logo">
+        <a href="home">
+            <button class="head_menu">Main Menu</button>
+        </a>
+        <a href="manage1">
+            <button class="head_menu">Manage Book</button>
+        </a>
+        <a href="issuing">
+            <button class="head_menu">Manage Issuings</button>
+        </a>
+        <label id="head_text">MANAGE STUDENTS</label>
+        <img src="{% static 'insitution_logo.jpg' %}" id="logo-right">
+    </header>
+    <body>
+        <div class="body_container">
+            <div class="body_child">
+                <form action="stuins">
+                    <p id="topic_style">Add Student Details :</p>
+
+                    <label class="text_style"> Student Name  : 
+                    <input name="stu" id="stu" placeholder="Student Name" size="50" type="text"/>
+                    </label>
+                    <label class="text_style"> ID card No. : 
+                    <input name="card" id="card" placeholder="Enter ID card no." size="50" type="text"/>
+                    </label>
+                    <label class="text_style"> Phone No. : 
+                    <input name="phone" id="phone" placeholder="Enter Phone No." size="50" type="text"/>
+                    </label>
+                    <label class="text_style"> Email : 
+                    <input name="email" id="email" placeholder="Enter Email ID" size="50" type="email"/>
+                    </label>
+                    <br><br>
+                    <input type="submit" style="padding: 5px; position: relative; left: 20px;">
+                </form>
+            </div>
+            <div class="body_child" style="position: relative; left: -10px;">
+                <p id="topic_style">Book Details</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">ID Card No.</th>
+                            <th scope="col">Student Name</th>
+                            <th scope="col">Phone No.</th>
+                            <th scope="col">Email ID</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                        {% for i in s %}
+                        <tr>
+                            <td>{{i.s_id}}</td>
+                            <td>{{i.sname}}</td>
+                            <td>{{i.phone}}</td>
+                            <td>{{i.email}}</td>
+                            <td><a href="delis/{{i.id}}">Delete</a></td>
+                        </tr>
+                        {% endfor %}
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </body>
+    <footer id="footer_style">
+        <label id="footer_text">LIBRARY MANAGEMENT SYSTEM</label>
+    </footer>
+</html>
