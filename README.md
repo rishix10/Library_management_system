@@ -37,6 +37,9 @@ Contributions are always welcome!
 
 Feel free to contribute by submitting issues and pull requests!.
 
+## License
+This project is licensed under the **MIT License**.
+
 
 ## Feedback
 
